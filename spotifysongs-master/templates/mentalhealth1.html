@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+    {% extends "base.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMap mentalhealth</title>
+    <style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #00d084, rgb(0, 225, 255));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-image img {
+    width: 100%;
+    height: auto;
+}
+
+.scrollable-container {
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.block {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.block-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.block-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.block-content p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+     <!--<div class=me"header-image">-->
+      <!--   <img src="static/img/mhheader.jpg" alt="Header Image">-->
+     <!--</div>-->
+    <div class="scrollable-container">
+        <div class="block">
+            <div class="block-content">
+                <img src="static/img/mentalhealth/m1.png" alt="Block 1 Image">
+                <p>Планирование - ключ к успеху. Создайте расписание подготовки, чтобы у вас было достаточно времени на каждую тему. Установите небольшие, достижимые цели, чтобы не перегружать себя. Это поможет избежать стресса и чувствовать себя более уверенно.</p>
+            </div>
+        </div>
+        <div class="block">
+            <div class="block-content">
+                <img src="static/img/mentalhealth/m2.png" alt="Block 2 Image">
+                <p>Учеба важна, но не забывайте про отдых и развлечения. Найдите время для хобби, встреч с друзьями и физических упражнений. Баланс между учебой и личной жизнью помогает поддерживать ментальное здоровье.</p>
+            </div>
+        </div>
+        <div class="block">
+            <div class="block-content">
+                <img src="static/img/mentalhealth/m3.png" alt="Block 3 Image">
+                <p>Найдите время для творческих занятий, будь то рисование, музыка или писательство. Это помогает отвлечься от учебных забот и освежить ум. Креативные занятия стимулируют мозг и помогают находить нестандартные решения.</p>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="block-content">
+                <img src="static/img/mentalhealth/m4.png" alt="Block 4 Image">
+                <p>Если вы чувствуете, что стресс и тревога становятся невыносимыми, не стесняйтесь обращаться за помощью к психологу или консультанту. Профессиональная помощь может быть очень полезной в трудные моменты.</p>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="block-content">
+                <img src="static/img/mentalhealth/m5.png" alt="Block 5 Image">
+                <p>Самое главное - верить в свои силы. Помните, что вы способны на многое и что трудности - это временные испытания. Уверенность в себе и своих способностях поможет вам преодолеть любые преграды на пути к успеху.</p>
+            </div>
+        </div>
+        <!-- Add more blocks as needed -->
+    </div>
+</body>
+</html>
+{% endblock %}

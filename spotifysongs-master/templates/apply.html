@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+
+<html>
+<head>
+    <style>
+        .page-break {
+            page-break-before: always; /* Insert a page break before this element when printing */
+        }
+        .wider-dropdown {
+    width: 1100px; /* Set the width to your desired value */
+
+}
+
+        .apply-button {
+            display: inline-block;
+            padding: 3px 8px;
+            margin: 5px 8px;
+            border: 2px solid;
+            border-radius: 5px;
+            text-decoration: none;
+
+        }
+
+        .white-button {
+            background-color: white;
+            color: black;
+
+        }
+
+        .apply-black-button {
+            background-color: black;
+            color: white;
+            padding: 6px 8px;
+
+        }
+
+        .select {
+            border: 2px solid black; /* Add a thicker black border */
+            padding: 5px; /* Add padding for spacing */
+            border-radius: 10px; /* Add rounded corners */
+        }
+        .gradient-text-apply {
+            font-size: 26px;
+            background-image: linear-gradient(to right, #ff5733, #6e62e3); /* Gradient colors */
+            -webkit-background-clip: text; /* Apply gradient to text */
+            color: transparent; /* Hide the default text color */
+        }
+
+    </style>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <meta charset="UTF-8">
+    <title>ЗДЕСЬ </title>
+</head>
+<body>
+<div class="image">
+                <img src="static/img/apply.png" alt="Image 1" width="1200">
+            </div>
+    <h3><span class="gradient-text-apply"> <i> - Выбирай программы на которые хочешь поступить, и загружай документы. </i></span></h3>
+    <h3> <span class="gradient-text-apply"> <i> - Мы автоматически подадим их когда придет время, а ты можешь забыть про дедлайны! </i></span> </h3>
+
+
+
+    <div class="page-break"></div> <!-- This will create a page break before it -->
+
+
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <label for="program_choices"> </label>
+    <br>
+    <select name="program_choices" id="program_choices" multiple class="select wider-dropdown" size="10">
+        {% for choice, label in form.program_choices.choices %}
+            <option value="{{ choice }}" {% if choice in selected_programs %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" class="apply-button apply-black-button" value="Добавить">
+</form>
+
+<div>
+    <h3>Выбранные образовательные программы:</h3>
+
+    <ul>
+        {% for program in selected_programs %}
+            <li>
+                {{ program }}
+                <form method="POST" style="display: inline;">
+                    <input type="hidden" name="program-cancel" value="{{ program }}">
+                    <input type="submit" class="apply-button white-button" value="Удалить">
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+    <br>
+<p>Не забудь про Паспорт / Документ об образовании / Документы, подтверждающие индивидуальные достижения /
+        Фото — при наличии /
+        Документы, подтверждающие особые права /
+        Справка о здоровье — при наличии.</p>
+<!-- ... Existing HTML code ... -->
+<h3>Загруженные документы:</h3>
+
+<form  method = "post" enctype="multipart/form-data">
+
+        <input class="apply-button white-button" type="file" name="file" />
+        <input type = "submit" class="apply-button apply-black-button" value="Submit">
+    </form>
+
+<div>
+
+    <ul>
+        {% for file in selected_files %}
+            <li>
+                {{ file }}
+                <form method="POST" style="display: inline;">
+                    <input type="hidden" name="file-cancel" value="{{ file }}">
+                    <input type="submit" class="apply-button white-button" value="Удалить">
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+
+</body>
+</html>
+{% endblock %}

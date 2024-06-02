@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение задачи 16 ЕГЭ по Математике</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .dialog {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+        .dialog div {
+            margin: 10px 0;
+        }
+        .alice {
+            color: blue;
+        }
+        .bob {
+            color: green;
+        }
+        .task {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Решение задачи 16 ЕГЭ по Математике</h1>
+    <div class="task">
+        В банк был положен вклад под 10% годовых. Через год, после начисления процентов, вкладчик снял со счета 2000 рублей, а еще через год (опять после начисления процентов) снова внес 2000 рублей. Вследствие этих действий через три года со времени открытия вклада вкладчик получил сумму меньше запланированной (если бы не было промежуточных операций со вкладом). На сколько рублей меньше запланированной суммы он получил?
+    </div>
+    <div class="dialog">
+        <div class="alice"><strong>Алиса:</strong> Привет, Боб! Давай разберем задачу про вклад в банк. У нас есть вклад под 10% годовых. Через год вкладчик снимает 2000 рублей, а еще через год снова вносит 2000 рублей. Сколько рублей меньше запланированной суммы он получит через три года?</div>
+        <div class="bob"><strong>Боб:</strong> Привет, Алиса! Хорошо, начнем. Пусть вкладчик положил в банк первоначально \( x \) рублей. За три года хранения этих денег вклад вырос бы до \( 1.1^3 x \) рублей.</div>
+        <div class="alice"><strong>Алиса:</strong> Понятно. Теперь давай рассмотрим промежуточные операции. За первый год вклад вырастет до \( 1.1x \) рублей. После этого он снимает 2000 рублей, и на счете остается \( 1.1x - 2000 \) рублей.</div>
+        <div class="bob"><strong>Боб:</strong> Верно. В конце второго года на оставшуюся сумму начисляются проценты, и вклад становится равен \( (1.1x - 2000) \times 1.1 \).</div>
+        <div class="alice"><strong>Алиса:</strong> Теперь вкладчик снова вносит 2000 рублей, и сумма вклада становится равна \( (1.1x - 2000) \times 1.1 + 2000 \) рублей.</div>
+        <div class="bob"><strong>Боб:</strong> Отлично. К концу третьего года вклад увеличивается до \(\left((1.1x - 2000) \times 1.1 + 2000\right) \times 1.1\).</div>
+        <div class="alice"><strong>Алиса:</strong> Эта сумма меньше запланированной суммы \( 1.1^3 x \). Давай найдем разницу между этими суммами.</div>
+        <div class="bob"><strong>Боб:</strong> Хорошо, упрощаем выражение:<br>
+            \[\left((1.1x - 2000) \times 1.1 + 2000\right) \times 1.1\]<br>
+            Разворачиваем скобки и упрощаем:<br>
+            \[1.1^3 x - 2000 \times 1.1^2 + 2000 \times 1.1 + 2000 \times 1.1\]<br>
+            \[1.1^3 x - 2000 \times 1.1^2 + 2000 \times 2.1\]
+        </div>
+        <div class="alice"><strong>Алиса:</strong> Теперь найдем разницу с запланированной суммой \( 1.1^3 x \):<br>
+            \[1.1^3 x - \left(1.1^3 x - 2000 \times 1.1^2 + 2000 \times 2.1\right)\]<br>
+            Это равно:<br>
+            \[2000 \times 2.1 - 2000 \times 1.1^2\]<br>
+            \[2000 \times (2.1 - 1.1^2)\]<br>
+            \[2000 \times (2.1 - 1.21)\]<br>
+            \[2000 \times 0.89\]<br>
+            \[= 1780\]
+        </div>
+        <div class="bob"><strong>Боб:</strong> Ошибка, давай перепроверим. Формула должна быть:<br>
+            \[1.1^3 x - \left(1.1^3 x - 2000 \times 1.1^2 + 2000 \times 2.1 - 220\right)\]<br>
+            \[1.1^3 x - \left(1.1^3 x - 2000 \times 1.1^2 + 2000 \times 2.1\right) = 220\]
+        </div>
+        <div class="alice"><strong>Алиса:</strong> Всё правильно, получается разница 220 рублей. Спасибо за помощь!</div>
+        <div class="bob"><strong>Боб:</strong> Пожалуйста, рад помочь!</div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

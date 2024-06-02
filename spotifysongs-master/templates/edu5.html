@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+    {% extends "base.html" %}
+{% block content %}
+<head>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение задачи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .task {
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .solution {
+            margin: 20px 0;
+        }
+        .code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-left: 3px solid #f36d33;
+            color: #333;
+            page-break-inside: avoid;
+            font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 1.6em;
+            max-width: 100%;
+            overflow: auto;
+            padding: 1em 1.5em;
+            display: block;
+            white-space: pre;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>Решение задачи 14 ЕГЭ по Информатике</h1>
+    <div class="task">
+        Операнды арифметического выражения записаны в системах счисления с основаниями 9 и 11:<br>
+        88x4y9 + 7x44y11<br>
+        В записи чисел переменными x и y обозначены допустимые в данных системах счисления неизвестные цифры. Определите значения x и y, при которых значение данного арифметического выражения будет наименьшим и кратно 61. Для найденных значений x и y вычислите частное от деления значения арифметического выражения на 61 и укажите его в ответе в десятичной системе счисления. Основание системы счисления в ответе указывать не нужно.
+    </div>
+    <div class="solution">
+        Решение.<br>
+        При помощи цикла for будем перебирать x и y в соответствии в заданными системами счислений. Затем переведём все числа в десятичную систему счисления и найдём их сумму, записав полученное значение в переменную. Проверим кратность переменной на 61 и выведем частное от деления значения арифметического выражения.
+    </div>
+    <div class="solution">
+        <div class="code">
+result_search = []<br>
+for x in '012345678':<br>
+    for y in '012345678':<br>
+        t = int('88' + x + '4' + y, 9) + int('7' + x + '44' + y, 11)<br>
+        if t % 61 == 0:<br>
+            result_search.append(t)<br>
+if result_search:<br>
+    print(min(result_search) // 61)
+        </div>
+        <div class="code">
+for x in '012345678':<br>
+    for y in '012345678':<br>
+        res = int('88'+ x + '4' + y,9) + int('7'+ x + '44' + y,11)<br>
+        if res % 61 == 0:<br>
+            print(res / 61)
+        </div>
+        <div class="code">
+alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')<br>
+for x in alphabet[:9]:<br>
+    for y in alphabet[:9]:<br>
+        A = int(f'88{x}4{y}', 9)<br>
+        B = int(f'7{x}44{y}', 11)<br>
+        if (A+B) % 61 == 0:<br>
+            print((A+B) // 61)
+        </div>
+        <div class="code">
+d = '012345678'<br>
+a=[int(f'88{x}4{y}',9)+int(f'7{x}44{y}',11) for x in d for y in d]<br>
+print(min([x for x in a if x%61 == 0])//61)
+        </div>
+        <div class="code">
+a = [int(('88'+ str(x) + '4' + str(y)), 9) + int(('7'+ str(x) + '44' + str(y)),11) for x in range(9) for y in range(9)]<br>
+print(*[i//61 for i in a if i % 61 == 0])
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

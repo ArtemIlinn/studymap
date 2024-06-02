@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>{{title}}</title>
+    <style>
+        /* Style for the navigation bar */
+        .navbar {
+            position: fixed; /* Fixed position to stay at the top */
+            top: 0;
+            background-color: white;
+            overflow: visible; /* hidden */
+            width: 100%;
+        }
+
+        /* Style for the logo image */
+        .navbar .logo {
+            float: left;
+            padding: 10px;
+        }
+
+        /* Style for the buttons in the navbar */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 10px;
+            border: 2px solid;
+            border-radius: 5px;
+            text-decoration: none;
+
+        }
+
+        .white-button {
+            background-color: white;
+            color: black;
+
+        }
+
+        .black-button {
+            background-color: black;
+            color: white;
+
+        }
+
+
+        /* Style for the icons with text */
+        .icon-with-text {
+            display: flex;
+            flex-direction: column; /* Stack image and text vertically */
+            align-items: center; /* Center image and text */
+            text-decoration: none; /* Remove underline for links */
+        }
+
+        /* Styling for the text inside the icons with text */
+        .icon-with-text .icon-text {
+            margin: 0; /* Reset margin for the text */
+        }
+
+        /* Style for profile pictures (larger size) */
+        .profile-picture {
+            /*width: 60px; /* Set the width of profile pictures */
+            /*height: 60px; /* Set the height of profile pictures */
+            border-radius: 50%; /* Make profile pictures round */
+        }
+
+        /* Style for images with text (smaller size) */
+        .image-with-text {
+            /*width: 50px; /* Set the width of images with text */
+            /*height: 50px; /* Set the height of images with text */
+            border-radius: 50%; /* Make images with text round */
+
+        }
+
+
+        /* Style for the specific word you want to color differently */
+        .black-color {
+            color: black; /* Set the text color to black */
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <!-- Logo image on the left side of the navbar with a clickable link to the home page -->
+        <a href="index" class="logo">
+            <img src="static/img/studymaplogo.png" alt="An image" width="235.75" height="49">
+        </a>
+
+        <!-- Buttons on the right side of the navbar with links -->
+        <a href="explore" class="button black-button">Выбирать</a>     <!-- BUTTON 2-->
+        <!-- <a href="apply" class="button white-button">Подать Документы</a>   -->      <!-- BUTTON 3-->
+        <a href="education" class="button black-button">Подготовка</a>       <!-- BUTTON 4-->
+        <a href="blog" class="button white-button">Блог</a>          <!-- BUTTON 5-->
+        <a href="careers" class="button white-button">Карьеры</a>       <!-- BUTTON 6-->
+        <a href="mentalhealth" class="button white-button">Ментальное Здоровье</a> <!-- BUTTON 7-->
+        <!-- <a href="signup" class="button black-button">Sign Up</a>        BUTTON 8-->
+        <!-- <a href="login" class="button black-button">Log In</a>        BUTTON 9-->
+
+
+
+
+
+        <!-- Profile Picture -->
+
+
+        <!-- Image with Text -->
+        
+
+        <!-- Other navigation items go here -->
+
+
+
+
+        {% if flag_logged_in == 1 %}
+        <!-- Display user's username and number of coins -->
+            <a href="coins" class="icon-with-text image-with-text" >
+                <img src="static/img/gem8.png" alt="Image Icon" width="50" height="50">
+                <p class="icon-text"><span class="black-color">{{ user.coins }}</span></p>
+            </a>
+            <a href="user" class="icon-with-text profile-picture">
+                <img src="static/img/pp copy.jpeg" alt="Profile Picture" width="50" height="50">
+                <p class="icon-text"><span class="black-color">{{ user.username }}</span></p>
+            </a>
+        {% else %}
+            <!-- Display default variables if user is not logged in -->
+            <a href="coins" class="icon-with-text image-with-text" >
+                <img src="static/img/gem8.png" alt="Image Icon" width="50" height="50">
+                <p class="icon-text"><span class="black-color">999</span></p>
+            </a>
+            <a href="user" class="icon-with-text profile-picture">
+                <img src="static/img/pp copy.jpeg" alt="Profile Picture" width="50" height="50">
+                <p class="icon-text"><span class="black-color">Timmy</span></p>
+            </a>
+        {% endif %}
+
+
+
+    </div>
+
+
+
+
+<main role="main" class="container">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

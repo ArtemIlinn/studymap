@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+
+<html>
+<head>
+    <style>
+        .page-break {
+            page-break-before: always; /* Insert a page break before this element when printing */
+        }
+    </style>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <meta charset="UTF-8">
+    <title>ЗДЕСЬ БУДУТ CAREER КУРСЫ И КУЧА ГЕЙМИФИКАЦИИ</title>
+</head>
+<body>
+    <h1>PROFILE</h1>
+
+<p>This is some content on the first page.</p>
+
+    <div class="page-break"></div> <!-- This will create a page break before it -->
+
+    <p>This content will appear on the second page when printed.</p>
+
+</body>
+</html>
+{% endblock %}

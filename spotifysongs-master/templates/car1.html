@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+    {% extends "base.html" %}
+{% block content %}
+<head>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .definition {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .dialog {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .alice {
+            color: blue;
+        }
+        .bob {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <h1>Project Manager</h1>
+    <div class="definition">
+        <p>Project Manager (Менеджер проекта) - это специалист, ответственный за планирование, управление и успешное завершение проекта в рамках определенных бюджета, временных рамок и требований к качеству.</p>
+        <p>Роль менеджера проекта включает в себя:</p>
+        <ul>
+            <li>Разработку плана проекта;</li>
+            <li>Организацию команды и ресурсов;</li>
+            <li>Контроль выполнения работ;</li>
+            <li>Управление бюджетом и расходами;</li>
+            <li>Риск-менеджмент;</li>
+            <li>Коммуникации с заказчиком и заинтересованными сторонами;</li>
+            <li>Обеспечение достижения целей проекта.</li>
+        </ul>
+    </div>
+
+    <div class="dialog">
+        <div class="alice"><strong>Алиса:</strong> Вот именно, менеджер проекта играет ключевую роль в успешном выполнении проекта. Он должен быть организованным и уметь эффективно управлять ресурсами.</div>
+        <div class="bob"><strong>Боб:</strong> Да, согласен. Кроме того, он должен быть отличным коммуникатором, чтобы эффективно взаимодействовать как с членами команды, так и с заказчиком.</div>
+        <div class="alice"><strong>Алиса:</strong> И еще важно уметь управлять рисками. Ведь в ходе проекта всегда могут возникнуть неожиданности, которые нужно быстро решать.</div>
+        <div class="bob"><strong>Боб:</strong> А еще я думаю, что хороший менеджер проекта должен быть лидером и мотиватором для своей команды, чтобы поддерживать высокий уровень мотивации и продуктивности.</div>
+        <div class="alice"><strong>Алиса:</strong> Точно, Боб. В конечном итоге, успех проекта во многом зависит от компетентности и профессионализма менеджера проекта.</div>
+    </div>
+</div>
+
+</body>
+</html>
+{% endblock %}

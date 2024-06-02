@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+
+<html>
+    
+<head>
+    <title>StudyMap</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            text-align: left;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .text {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .image {
+            flex: 1;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        .heading {
+            font-size: 50px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .subheading {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .slogan {
+            font-size: 24px;
+        }
+
+        .description {
+            font-size: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 10px;
+            border: 2px solid;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .white-button {
+            background-color: white;
+            color: black;
+        }
+
+        .black-button {
+            background-color: black;
+            color: white;
+        }
+
+        .gradient-text {
+            font-size: 76px;
+            background-image: linear-gradient(to right, #ff5733, #6e62e3); /* Gradient colors */
+            -webkit-background-clip: text; /* Apply gradient to text */
+            color: transparent; /* Hide the default text color */
+        }
+        .slogan-gradient-text {
+            font-size: 24px;
+            background-image: linear-gradient(to right, #ff5733, #6e62e3); /* Gradient colors */
+            -webkit-background-clip: text; /* Apply gradient to text */
+            color: transparent; /* Hide the default text color */
+        }
+
+        .h2-gradient-text {
+            font-size: 40px;
+            background-image: linear-gradient(to right, #ff5733, #6e62e3); /* Gradient colors */
+            -webkit-background-clip: text; /* Apply gradient to text */
+            color: transparent; /* Hide the default text color */
+        }
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <br>
+
+
+
+        <!-- First Row: Text on the left, Image on the right -->
+        <div class="row">
+            <div class="text">
+                <h1 class="heading">Со <strong><i><span class="gradient-text">study_map</span></i></strong> поступление как никогда просто</h1>
+                <h2 class="subheading">  <span style="color: white;">space </span>   </h2>
+                <p class="slogan">Мы собираем данные со всех учреждений и рекомендуем какие лучше именно <span class="slogan-gradient-text">для тебя</span></p>
+                <p class="description"> </p>
+                <a href="login" class="button white-button">Войти</a>
+                <a href="signup" class="button black-button">Зарегистрироваться</a>
+            </div>
+            <div class="image">
+                <img src="static/img/gradientgirltabwhitebackgroung.png" alt="Image 1">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Second Row: Text on the right, Image on the left -->
+        <div class="row">
+
+            <div class="image">
+                <img src="static/img/gradientdude.png" alt="Image 2">
+            </div>
+            <div class="text">
+                <h2>- Мы прочесали кучу образовательных программ чтобы это не пришлось делать тебе!</h2>
+                <br>
+                <h2>-  Просто выбери что ждешь от учебы, а мы покажем что есть</h2>
+                <br>
+                 <h2>- Кстати, AI-помощник к твоим услугам</h2>
+                <br>
+
+                <a href="explore" class="button black-button">Выбирать</a>
+                <a href="signup" class="button white-button">Зарегистрироваться</a>
+            </div>
+        </div>
+    </div>
+<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+    <div class="row">
+            <div class="text">
+                <h2>- Загрузи все документы сюда, и забудь о дедлайнах</h2>
+                <br>
+                <h2>- Мы отправим их когда придет время и сразу во все выбранные учреждения</h2>
+                <br>
+                <a href="apply" class="button black-button">Подать Документы</a>
+            </div>
+            <div class="image">
+                <img src="static/img/gradientfly.png" alt="Image 1">
+            </div>
+        </div>
+<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+<div class="row">
+
+            <div class="image">
+                <img src="static/img/gradientguys.png" alt="Image 2">
+            </div>
+            <div class="text">
+                <h2>- С нами можно готовиться без двойных листочков, прокачивая себя и получая сово-койны</h2>
+                <br>
+                <h2>- Примеряй разные карьеры на практике и решай кем хочешь быть </h2>
+                <br>
+                 <h2>- Учеба должна приносить удовольствие, и с этим мы помогаем</h2>
+                <br>
+
+                <a href="education" class="button black-button">Подготовка</a>
+                <a href="careers" class="button black-button">Карьеры</a>
+                <a href="signup" class="button white-button">Зарегистрироваться</a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="text">
+                <h2>- Читай истории и лайфхаки о поступлении</h2>
+                <br>
+                <h2>- И не забывай заботиться о себе, стресс нам здесь не нужен </h2>
+                <br>
+                <a href="blog" class="button black-button">Блог</a>
+                <a href="mentalhealth" class="button black-button">Ментальное Здоровье</a>
+                <a href="signup" class="button white-button">Зарегистрироваться</a>
+            </div>
+            <div class="image">
+                <img src="static/img/gradientsport.png" alt="Image 1">
+            </div>
+        </div>
+<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <br>
+<div class="row">
+
+            <div class="image">
+                <img src="static/img/gradientpainter.png" alt="Image 2">
+            </div>
+            <div class="text">
+                <h2>- Остались вопросы?</h2>
+                <br>
+                <h2>- Напиши нам в Telegram </h2>
+
+                <br>
+
+                <a href="https://t.me/" class="button black-button">@SM_support</a>
+                <br>
+                <br>
+                <div class="text">
+                    <h2>- Присоединяйся к <span class="h2-gradient-text">study_map</span></h2>
+                    <a href="login" class="button white-button">Войти</a>
+                    <a href="signup" class="button black-button">Зарегистрироваться</a>
+                    
+                </div>
+            </div>
+        </div>
+<br>
+                    <br>
+                    <br>
+                     <br>
+                     <br>
+
+
+</body>
+</html>
+{% endblock %}

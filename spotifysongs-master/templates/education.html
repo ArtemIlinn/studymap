@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <title>StudyMap Edu</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.blog-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #000;
+    font-size: 3rem;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    
+}
+
+.tile {
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+
+.tile a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    background: linear-gradient(to right, #ff5733, #6e62e3) 
+}
+
+.tile img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
+.tile-text {
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+
+.tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <h1></h1> 
+        <div class="bento-grid">
+            <div class="tile">
+                <a href="edu1">
+                    <img src="static/img/edu/e1.png" alt="C 1">
+                    <div class="tile-text">Математика #16</div>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="edu2">
+                    <img src="static/img/edu/e2.png" alt="C 2">
+                    <div class="tile-text">Русский Язык #21</div>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="edu3">
+                    <img src="static/img/edu/e3.png" alt="C 3">
+                    <div class="tile-text">Физика #22</div>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="edu4">
+                    <img src="static/img/edu/e4.png" alt="C 4">
+                    <div class="tile-text">Литература #1</div>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="edu5">
+                    <img src="static/img/edu/e5.png" alt="C 5">
+                    <div class="tile-text">Информатика #14</div>
+                </a>
+            </div>
+            <div class="tile">
+                <a href="edu6">
+                    <img src="static/img/edu/e6.png" alt="C 6">
+                    <div class="tile-text">История #17</div>
+                </a>
+            </div>
+            <!-- Add more tiles as needed -->
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
+

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+    {% extends "base.html" %}
+    {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ddd;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.featured-article {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background: linear-gradient(to bottom right, #ff5733, #6e62e3);
+}
+
+.featured-article img {
+    width: 40%;
+    height: auto;
+}
+
+.featured-article .article-content {
+    padding: 20px;
+    width: 60%;
+}
+
+.featured-article h2 {
+    font-size: 3rem;
+    color: #f4f4f4;
+    margin-bottom: 10px;
+}
+
+.featured-article p {
+    color: #f4f4f4;
+    margin-bottom: 20px;
+}
+
+.featured-article a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.article-tile {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.article-tile img {
+    width: 100%;
+    height: auto;
+}
+
+.article-tile .article-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.article-tile h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.article-tile p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.article-tile a {
+    color: #ff5733;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>StudyMap Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="featured-article">
+            <img src="static/img/blog/blog1.png" alt="Featured Article Image">
+            <div class="article-content">
+                <h2>История: Перемены в поиске своего призвания: мой путь от МГУ до ВШЭ</h2>
+                <p>Мое имя - Анна, и я расскажу вам о своем удивительном путешествии к профессиональной самореализации. Начав свой путь в</p>
+                    <a href="blf">Больше</a>
+            </div>
+        </section>
+        <section class="articles-grid">
+            <div class="article-tile">
+                <img src="static/img/blog/blog2.png" alt="Article Image">
+                <div class="article-content">
+                    <h3>Как студенту планировать бюджет и управлять финансами</h3>
+                    <p>7 полезных советов</p>
+                    <a href="bl1">Больше</a>
+                </div>
+            </div>
+            <div class="article-tile">
+                <img src="static/img/blog/blog3.png" alt="Article Image">
+                <div class="article-content">
+                    <h3>Time management </h3>
+                    <p>Рассказываем как справляться с современным ритмом жизни</p>
+                    <a href="bl2">Больше</a>
+                </div>
+            </div>
+            <div class="article-tile">
+                <img src="static/img/blog/blog4.png" alt="Article Image">
+                <div class="article-content">
+                    <h3>Путь к успеху: подготовка к ЕГЭ и поступлению в вуз</h3>
+                    <p>Несколько аспектов, которые помогут добиться своих целей</p>
+                    <a href="bl3">Больше</a>
+                </div>
+            </div>
+            <!-- Add more article tiles as needed -->
+        </section>
+    </main>
+</body>
+</html>
+{% endblock %}
