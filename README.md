@@ -9,3 +9,10 @@
 
 ![alt text](pics/landingpage-1.png)
 
+## Start Your Own Journey: Sign In & Sign Up
+![alt text](pics/6.png)
+![alt text](pics/7.png)
+
+## Mental Healt as the Top Priority
+
+![alt text](pics/mentalhealth-1.png)
