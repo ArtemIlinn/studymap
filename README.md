@@ -6,6 +6,8 @@
 
 ### Career guidance platform.
 
+Imagine you are a 16-18 year old teenager and you have to make a decision which will have a drastic impact on your future, quite a tough choice. These people are at the decisive stage of choosing an educational path and are looking for information about future educational programs and professions. This project is dedicated to broadening applicants’ horizons by providing the accessible data regarding educational programs, but what is more important is the guidance at their personal choice and custom path selection. To combine one’s interest, life goals, and education.
+
 
 ![alt text](pics/landingpage-1.png)
 
