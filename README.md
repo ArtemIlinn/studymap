@@ -26,7 +26,12 @@
 
 ## Choose Your Future Self
 ![alt text](pics/car.png)
-![alt text](pics/car1.png)
+![alt text](pics/car1-1.png)
+![alt text](pics/car2-1.png)
+![alt text](pics/car3-1.png)
+![alt text](pics/car4-1.png)
+![alt text](pics/car5-1.png)
+![alt text](pics/car6-1.png)
 
 ## Engage in the Community of Like-Minded people
 ![alt text](pics/b1.png)
