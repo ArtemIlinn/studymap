@@ -1,4 +1,4 @@
-# studymap
+# StudyMap
 
 ![alt text](https://github.com/ArtemIlinn/studymap/blob/main/sm.png)
 
