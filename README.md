@@ -7,5 +7,5 @@
 ### Career guidance platform.
 
 
-[!alt text](pics/landingpage-1.png)
+![alt text](pics/landingpage-1.png)
 
