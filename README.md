@@ -21,7 +21,7 @@
 
 ## Get to Build Yor Future Here
 ![alt text](pics/edu.png)
-![alt text](pics/edu-1.png)
+![alt text](pics/edu1-1.png)
 
 
 ## Choose Your Future Self
