@@ -48,6 +48,6 @@ Imagine you are a 16-18 year old teenager and you have to make a decision which 
 ![alt text](pics/bl3-1.png)
 ![alt text](pics/blf-1.png)
 
-## Mental Healt as the Top Priority
+## Mental Health as the Top Priority
 
 ![alt text](pics/mentalhealth-1.png)
